@@ -5,80 +5,47 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Feed</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Feed</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding> 
-  <div mbsc-card>
-    <div class="mbsc-card-header">
-        <img src="https://img.mobiscroll.com/demos/mr-profile2.png" class="mbsc-avatar">
-        <h5 class="mbsc-card-title mbsc-bold">Carl Obama</h5>
-        <div class="mbsc-card-subtitle"> at 5:16 PM</div>
-    </div>
-    <img src="https://img.mobiscroll.com/demos/Blueberry.png">
-    <div class="mbsc-card-content">
-        Yeaahhh :D :D :D I've made it. It took me 3 months to improve my blueberry cake. But it's perfect now. :P
-    </div>
-    <div class=" mbsc-card-footer ">
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="heart"></button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="thumbs-up2"></button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="material-message"></button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="tag"></button>
-    </div>
-</div>
+<ion-content padding>
 
-<div mbsc-card>
-    <div class="mbsc-card-header">
-        <img src="https://img.mobiscroll.com/demos/mrs-profile1.png" class="mbsc-avatar">
-        <h5 class="mbsc-card-title mbsc-bold">Hortense Tinker</h5>
-        <div class="mbsc-card-subtitle"> at 4:55 PM</div>
-    </div>
-    <img src="https://img.mobiscroll.com/demos/card_1.png">
-    <div class="mbsc-card-content">
-        Best places to seek silence !!! The Dhamma Giri, a vipassana meditation retreat.
-    </div>
-    <div class=" mbsc-card-footer mbsc-align-right">
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-mail-reply"></button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="star3">3</button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-retweet">5</button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-ellipsis-h"></button>
-        
-    </div>
-</div>
+    <ion-card>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/imgs/mr-profile2.png" class="mbsc-avatar">
+            </ion-avatar>
+            <h2 class="feed_title">{{ user_name }}</h2>
+            <p>November 5, 1995</p>
+        </ion-item>
 
-<div mbsc-card>
-    <div class="mbsc-card-header">
-        <img src="https://img.mobiscroll.com/demos/mrs-profile2.png" class="mbsc-avatar">
-        <h5 class="mbsc-card-title mbsc-bold">Jenna Doe</h5>
-        <div class="mbsc-card-subtitle"> at 4:16 PM</div>
-    </div>
-    <img src="https://img.mobiscroll.com/demos/card_2.png">
-    <div class="mbsc-card-content">
-        There is a new baby panda at the zoo.... :) :O :D
-    </div>
-    <div class=" mbsc-card-footer mbsc-align-right">
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-mail-reply"></button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="star3">19</button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-retweet">3</button>
-        <button class="mbsc-btn mbsc-btn-flat" data-icon="fa-ellipsis-h"></button>
-    </div>
-</div>
+        <img src="assets/imgs/Blueberry.png">
 
-<div mbsc-card>
-    <div class="mbsc-card-header">
-        <img src="https://img.mobiscroll.com/demos/mr-profile1.png" class="mbsc-avatar">
-        <h5 class="mbsc-card-title mbsc-bold">John Bush</h5>
-        <div class="mbsc-card-subtitle"> at 2:23 PM</div>
-    </div>
-    <img src="https://img.mobiscroll.com/demos/account-background.jpg">
-    <div class="mbsc-card-content">
-        Best trip ever!!! :D I'll definetly come back here. :)
-    </div>
-    <div class=" mbsc-card-footer ">
-        <button class="mbsc-btn mbsc-btn-flat">Like</button>
-        <button class="mbsc-btn mbsc-btn-flat">Share</button>
-    </div>
-</div>
+        <ion-card-content>
+            <p>I'm building an amaizin app. :D</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div> 12 Likes</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="text"></ion-icon>
+                    <div> 4 Comments</div>
+                </button>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note> 11h ago</ion-note>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+
 </ion-content>
