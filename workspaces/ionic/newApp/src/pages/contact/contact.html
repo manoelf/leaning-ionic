@@ -7,11 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+  <ion-list *ngFor="let contato of contatos">
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <ion-avatar item-start>
+        <img src="{{ contato.img }}">
+      </ion-avatar>
+      <h2> {{ contato.nome }} </h2>
+      <p> {{ contato.msg }}</p>
     </ion-item>
   </ion-list>
 </ion-content>

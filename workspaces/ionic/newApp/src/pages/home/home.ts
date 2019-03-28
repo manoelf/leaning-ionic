@@ -8,17 +8,12 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   public bemvindo:string = "Bem vindo ao IONIC 4 =D";
+  public lista:Array<string> = ['teste 1', 'teste 2', 'teste 3', 'teste 4', 'teste 5', ];
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  public test():void {
-    alert("A função funcionou");
-  }
 
-  ionViewDidLoad() {
-    this.test();
-  }
 
 }
