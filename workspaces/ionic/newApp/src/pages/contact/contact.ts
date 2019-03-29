@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { MovieProvider } from '../../providers/movie/movie';
 
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html'
+  templateUrl: 'contact.html',
+  providers:[MovieProvider]
 })
 export class ContactPage {
 
   public contatos:Array<object>;
-  private baseURL:String;
 
-  constructor(public navCtrl: NavController, public http : Http) {
-    this.baseURL = "https://api.themoviedb.org/3/";
+
+  constructor(public navCtrl: NavController, public movieProvider: MovieProvider) {
+
     this.contatos = [
       {
       "nome": "Bruno",
@@ -32,21 +34,18 @@ export class ContactPage {
     ];
   }
 
-  private getAPIKey():string  {
-    return "cd3cf1610c3a51ffd331f804fef7aaa6";
-  }
-
+  
   ionViwDidLoad() {
-    this.http.get(this.baseURL + "movie/latest" + this.getAPIKey()).subscribe(
-    data => {
-      const obj = (data as any);
-      const obj_json = JSON.parse(obj);
-      console.log(obj_json);
-    },
-    erro => {
-    console.log(erro);
-    }
-  );
+    this.movieProvider.getLatestMovie().subscribe(
+      data => {
+        const obj = (data as any);
+        const obj_json = JSON.parse(obj._body);
+        console.log(obj_json);
+      },
+      erro => {
+      console.log(erro);
+      }
+    );
   }
 
 }
